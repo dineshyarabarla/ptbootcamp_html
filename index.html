@@ -2,18 +2,22 @@
 <html>
 <body>
 
-<p>Click on increment below to increase the counter value </p>
+<p><strong>Enter a number and submit to get a square root value </strong></p>
 
-<p id="demo"><button type="button">Increment</button></p>
-<p id="result">0</p>
+
+<label for="input">Enter Value:</label><br>
+<input type="number" id="input" placeholder=0  name="input"><br>
+<p id="demo"><button type="button">Submit</button></p>
+
+<p id="result"></p>
 
 <script>
-var counter = 0;
+var val = 0;
 document.getElementById("demo").onclick = function() {myFunction()};
 
 function myFunction() {
-  counter = counter +1;
-  document.getElementById("result").innerHTML = counter;
+  val = document.getElementById("input").value;
+  document.getElementById("result").innerHTML = "Square root of "+val+"   is : "+val*val+ " !!";
 }
 </script>
 
